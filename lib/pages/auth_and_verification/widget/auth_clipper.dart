@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AuthClipper extends CustomClipper<Path> {
-  final bool forLogin;
 
-  AuthClipper.forLogin() : this.forLogin = true;
-
-  AuthClipper.forSignup() : this.forLogin = false;
+  AuthClipper();
 
   @override
   Path getClip(Size size) {

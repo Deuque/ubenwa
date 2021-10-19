@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ubenwa_test/components/custom_button.dart';
 import 'package:ubenwa_test/components/gradient_scaffold.dart';
+import 'package:ubenwa_test/controllers/auth_controller.dart';
 import 'package:ubenwa_test/pages/onboarding/component/onboard_layout.dart';
 import 'package:ubenwa_test/pages/onboarding/component/onboard_page_indicator.dart';
 import 'package:ubenwa_test/pages/onboarding/model/onboard_model.dart';
 import 'package:ubenwa_test/util/index.dart';
+
+import '../../locator.dart';
 
 class Onboard extends StatelessWidget {
   const Onboard({Key? key}) : super(key: key);
@@ -73,7 +76,14 @@ class Onboard extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              MButton(isEnabled: false, title: 'Login'),
+              MButton(
+                isEnabled: false,
+                title: 'Login',
+                onTap: () {
+                  locator<AuthController>().setAuthType(AuthType.login);
+                  Navigator.pushNamed(context, 'auth');
+                },
+              ),
               Spacer(),
               ValueListenableBuilder<int>(
                   valueListenable: _onboardPage,
@@ -86,9 +96,11 @@ class Onboard extends StatelessWidget {
                     bool enabled = value == lastPage;
                     return MButton(
                         isEnabled: enabled,
-                        onTap: enabled
-                            ? () => Navigator.pushNamed(context, 'auth')
-                            : null,
+                        onTap: () {
+                          locator<AuthController>()
+                              .setAuthType(AuthType.signup);
+                          Navigator.pushNamed(context, 'auth');
+                        },
                         title: 'SignUp');
                   }),
             ],
