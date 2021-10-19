@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ubenwa_test/components/gradient_scaffold.dart';
+import 'package:ubenwa_test/components/custom_scaffold.dart';
 import 'package:ubenwa_test/components/logo.dart';
 import 'package:ubenwa_test/controllers/auth_controller.dart';
 import 'package:ubenwa_test/locator.dart';

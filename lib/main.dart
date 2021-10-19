@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ubenwa_test/locator.dart';
 import 'package:ubenwa_test/pages/auth_and_verification/auth.dart';
 import 'package:ubenwa_test/pages/auth_and_verification/verification.dart';
+import 'package:ubenwa_test/pages/homepage/homepage.dart';
 import 'package:ubenwa_test/pages/onboarding/onboard.dart';
 import 'package:ubenwa_test/pages/splashscreen.dart';
 import 'package:ubenwa_test/util/strings.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         '/': (context)=>SplashScreen(),
         'onboard': (context)=>Onboard(),
         'auth': (context)=>Auth(),
-        'verify': (context)=>Verification()
+        'verify': (context)=>Verification(),
+        'home': (context)=>Homepage()
       },
     );
   }

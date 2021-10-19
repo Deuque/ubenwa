@@ -5,3 +5,4 @@ const String onboardTitle3 = 'Screening Cry';
 const String onboardTitle4 = 'Result';
 const String onboardTitle5 = 'Recommendation';
 const String onboardSubtitle1 = 'By entering your details, your are agreeing to our Terms of Service and Privacy Policy. Thanks!';
+const String dialogText = 'Help improve this product and other life saving health products by granting Ubewan access to use this recording for research.';

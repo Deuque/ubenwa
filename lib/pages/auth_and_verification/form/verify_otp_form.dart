@@ -62,6 +62,7 @@ class VerifyOtpForm extends StatelessWidget {
                     isEnabled: true,
                     title: 'Continue',
                     fullSized: true,
+                    onTap: () => Navigator.pushNamed(context, 'home'),
                   ),
                 ),
               ],
