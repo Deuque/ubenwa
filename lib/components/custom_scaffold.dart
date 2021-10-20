@@ -14,6 +14,7 @@ class GradientScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         bottomNavigationBar: bottomNavigation,
         body: Container(
           height: double.infinity,

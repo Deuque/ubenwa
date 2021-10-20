@@ -62,6 +62,7 @@ class AllowRecording extends StatelessWidget {
                     isEnabled: true,
                     title: 'Yes',
                     fullSized: true,
+                    onTap: onNoClicked,
                   ),
                 ),
               ],

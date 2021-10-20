@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ubenwa_test/locator.dart';
 import 'package:ubenwa_test/pages/auth_and_verification/auth.dart';
@@ -15,9 +16,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Ubenwa',
       theme: ThemeData(
         primarySwatch: Colors.blue,
           fontFamily: plusRoundedFont

@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void didChangeDependencies() {
     ScreenSize.init(context);
     Future.delayed(Duration(milliseconds: 900),
-            () => Navigator.pushNamed(context, 'onboard'));
+            () => Navigator.pushReplacementNamed(context, 'onboard'));
     super.didChangeDependencies();
   }
   @override
